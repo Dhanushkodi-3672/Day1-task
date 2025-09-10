@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CRUD - Operation</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div>
+      <h1 class="log">LOGIN</h1>
+      <form onsubmit="handleFormSubmit(event)">
+        <label>Name</label><br />
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          required
+        /><br />
+
+        <label>Age</label><br />
+        <input
+          type="number"
+          id="age"
+          placeholder="Enter your age"
+          required
+        /><br />
+
+        <button class="btn" type="submit" id="submitBtn">Submit</button>
+        <button
+          class="btns"
+          type="button"
+          id="cancelBtn"
+          onclick="cancelEdit()"
+          style="display: none"
+        >
+          Cancel
+        </button>
+      </form>
+    </div>
+
+    <!-- Table -->
+    <table id="details">
+      <thead>
+        <tr>
+          <th>S.NO</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- People rows go here -->
+      </tbody>
+    </table>
+
+    <script src="index.js"></script>
+  </body>
+</html>
